@@ -89,6 +89,7 @@ function userSelect() {
         (box7 == 'X' || box7 == '0') && (box8 == 'X' ||
             box8 == '0') && (box9 == 'X' || box9 == '0')) {
         window.alert('Match Tie');
+        tie();
     }
 }
 
@@ -125,6 +126,18 @@ function reset(punktestand0, punktestandX) {
     document.getElementById("punktestand-title").style.display = "block";
     document.getElementById("punktestand-text").style.display = "block";
     document.getElementById("punktestand-text").innerText = punktestandX + "  :  " + punktestand0;
+}
+
+function tie() {
+    document.getElementById('box1').innerHTML = "";
+    document.getElementById("box2").innerHTML = "";
+    document.getElementById("box3").innerHTML = "";
+    document.getElementById("box4").innerHTML = "";
+    document.getElementById("box5").innerHTML = "";
+    document.getElementById("box6").innerHTML = "";
+    document.getElementById("box7").innerHTML = "";
+    document.getElementById("box8").innerHTML = "";
+    document.getElementById("box9").innerHTML = "";
 }
 
 function restart() {
