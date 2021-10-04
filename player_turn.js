@@ -1,102 +1,184 @@
 var turn = 1;
 var player_turn = document.getElementById("player_turn");
 
+var box1 = document.getElementById('box1');
+var box2 = document.getElementById("box2");
+var box3 = document.getElementById("box3");
+var box4 = document.getElementById("box4");
+var box5 = document.getElementById("box5");
+var box6 = document.getElementById("box6");
+var box7 = document.getElementById("box7");
+var box8 = document.getElementById("box8");
+var box9 = document.getElementById("box9");
+
 function function1() {
     if (turn == 1) {
-        box1.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box1.innerHTML == "") {
+            box1.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box1.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box1.innerHTML == "") {
+            box1.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }
 function function2() {
     if (turn == 1) {
-        box2.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box2.innerHTML == "") {
+            box2.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box2.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box2.innerHTML == "") {
+            box2.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }
 function function3() {
     if (turn == 1) {
-        box3.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box3.innerHTML == "") {
+            box3.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box3.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box3.innerHTML == "") {
+            box3.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }
 function function4() {
     if (turn == 1) {
-        box4.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box4.innerHTML == "") {
+            box4.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box4.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box4.innerHTML == "") {
+            box4.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }
 function function5() {
     if (turn == 1) {
-        box5.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box5.innerHTML == "") {
+            box5.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box5.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box5.innerHTML == "") {
+            box5.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }
 function function6() {
     if (turn == 1) {
-        box6.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box6.innerHTML == "") {
+            box6.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box6.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box6.innerHTML == "") {
+            box6.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }
 function function7() {
     if (turn == 1) {
-        box7.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box7.innerHTML == "") {
+            box7.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box7.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box7.innerHTML == "") {
+            box7.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }
 function function8() {
     if (turn == 1) {
-        box8.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box8.innerHTML == "") {
+            box8.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box8.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box8.innerHTML == "") {
+            box8.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }
 function function9() {
     if (turn == 1) {
-        box9.innerText = 'X';
-        player_turn.innerHTML = "Player 0's turn";
-        turn++;
+        if (box9.innerHTML == "") {
+            box9.innerText = 'X';
+            player_turn.innerHTML = "Player 0's turn";
+            turn++;
+        } else {
+            alert("Field is already marked.");
+        }
     } else if (turn == 2) {
-        box9.innerText = '0';
-        player_turn.innerHTML = "Player X's turn";
-        turn--;
+        if (box9.innerHTML == "") {
+            box9.innerText = '0';
+            player_turn.innerHTML = "Player X's turn";
+            turn--;
+        } else {
+            alert("Field is already marked.");
+        }
     }
 }

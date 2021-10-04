@@ -134,7 +134,6 @@ function restart() {
 function start() {
     document.getElementById("start").style.display = "none";
     document.getElementById("player_turn").style.display = "block";
-    document.getElementById("reset").style.display = "inline-block";
     document.getElementById("restart").style.display = "inline-block";
     document.getElementById("container").style.display = "grid";
 }
