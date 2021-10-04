@@ -12,12 +12,15 @@
 <body>
     <div class="title">
         <h1>TIC TAC TOE</h1>
-        <button id="start">Start</button>
+        <button id="start" onclick="start();">Start</button>
         <h2 id="player_turn">Player X's turn</h2>
-        <!-- <h3 id="gewonnen"></h3> -->
     </div>
 
-    <div class="container">
+    <h3 id="punktestand-title">Punktestand</h3>
+
+    <h3 id="punktestand-text">:</h3>
+
+    <div id="container">
         <div id="box1" onclick="function1(); userSelect();"></div>
         <div id="box2" onclick="function2(); userSelect();"></div>
         <div id="box3" onclick="function3(); userSelect();"></div>
@@ -29,8 +32,8 @@
         <div id="box9" onclick="function9(); userSelect();"></div>
     </div>
 
-    <button class="reset" onclick="reset()">Reset</button>
-    <button class="restart" onclick="restart()">Restart</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    <button id="restart" onclick="restart()">Restart</button>
 
     <script src="index.js"></script>
     <script src="player_turn.js"></script>

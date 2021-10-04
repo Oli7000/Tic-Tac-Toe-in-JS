@@ -25,9 +25,9 @@ body {
     font-size: 20px;
 }
 
-.container {
+#container {
     margin: 0 auto;
-    display: grid;
+    display: none;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
@@ -52,48 +52,48 @@ body {
     font-size: 50px;
     cursor: pointer;
 }
-.reset {
+#reset {
     margin-top: 2em;
     margin-left: 53.1em;
-    background-color: red; /* Green */
+    background-color: red;
     border: 1px solid red;
     color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: none;
     font-size: 16px;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 50%;
 }
 
-.reset:hover {
+#reset:hover {
     background-color: white;
     color: red;
 }
 
-.restart {
-    background-color: royalblue; /* Green */
+#restart {
+    background-color: royalblue;
     border: 1px solid royalblue;
     color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: none;
     font-size: 16px;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 50%;
 }
 
-.restart:hover {
+#restart:hover {
     background-color: white;
     color: royalblue;
 }
 
 #start {
-    background-color: green; /* Green */
+    background-color: green;
     border: 1px solid green;
     color: white;
     padding: 16px 32px;
@@ -109,4 +109,23 @@ body {
 #start:hover {
     background-color: white;
     color: green;
+}
+
+#player_turn {
+    display: none;
+    margin-bottom: 3.5em;
+}
+
+#punktestand-title {
+    display: none;
+    margin-left: 100px;
+    margin-top: -8%;
+    color: white;
+}
+
+#punktestand-text {
+    display: none;
+    margin-left: 7em;
+    margin-top: 1%;
+    color: white;
 }

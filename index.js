@@ -1,3 +1,6 @@
+var punktestandX = 0;
+var punktestand0 = 0;
+
 function userSelect() {
     var box1 = document.getElementById("box1").innerText;
     var box2 = document.getElementById("box2").innerText;
@@ -10,56 +13,72 @@ function userSelect() {
     var box9 = document.getElementById("box9").innerText;
 
     if ((box1 == 'X') && (box2 == 'X') && (box3 == 'X')) {
-        replayX();
+        punktestandX++;
+        replayX(punktestand0, punktestandX);
     }
     else if ((box2 == 'X') && (box4 == 'X') && (box7 == 'X')) {
-        replayX();
+        punktestandX++;
+        replayX(punktestand0, punktestandX);
     }
     else if ((box7 == 'X') && (box8 == 'X') && (box9 == 'X')) {
-        replayX();
+        punktestandX++;
+        replayX(punktestand0, punktestandX);
     }
     else if ((box3 == 'X') && (box6 == 'X') && (box9 == 'X')) {
-        replayX();
+        punktestandX++;
+        replayX(punktestand0, punktestandX);
     }
     else if ((box1 == 'X') && (box5 == 'X') && (box9 == 'X')) {
-        replayX();
+        punktestandX++;
+        replayX(punktestand0, punktestandX);
     }
     else if ((box3 == 'X') && (box5 == 'X') && (box7 == 'X')) {
-        replayX();
+        punktestandX++;
+        replayX(punktestand0, punktestandX);
     }
     else if ((box2 == 'X') && (box5 == 'X') && (box8 == 'X')) {
-        replayX();
+        punktestandX++;
+        replayX(punktestand0, punktestandX);
     }
     else if ((box4 == 'X') && (box5 == 'X') && (box6 == 'X')) {
-        replayX();
+        punktestandX++;
+        replayX(punktestand0, punktestandX);
     }
 
     // Checking of Player X finsh
     // Checking for Player 0 starts, Is player 0 won or
     // not and after that disabled all the other fields
     else if ((box1 == '0') && (box2 == '0') && (box3 == '0')) {
-        replay0();
+        punktestand0++;
+        replay0(punktestand0, punktestandX);
     }
     else if ((box1 == '0') && (box4 == '0') && (box7 == '0')) {
-        replay0();
+        punktestand0++;
+        replay0(punktestand0, punktestandX);
     }
     else if ((box7 == '0') && (box8 == '0') && (box9 == '0')) {
-        replay0();
+        punktestand0++;
+        replay0(punktestand0, punktestandX);
     }
     else if ((box3 == '0') && (box6 == '0') && (box9 == '0')) {
-        replay0();
+        punktestand0++;
+        replay0(punktestand0, punktestandX);
     }
     else if ((box1 == '0') && (box5 == '0') && (box9 == '0')) {
-        replay0();
+        punktestand0++;
+        replay0(punktestand0, punktestandX);
     }
     else if ((box3 == '0') && (box5 == '0') && (box7 == '0')) {
-        replay0();
+        punktestand0++;
+        replay0(punktestand0, punktestandX);
     }
     else if ((box2 == '0') && (box5 == '0') && (box8 == '0')) {
-        replay0();
+        punktestand0++;
+        replay0(punktestand0, punktestandX);
     }
     else if ((box4 == '0') && (box5 == '0') && (box6 == '0')) {
-        replay0();
+        punktestand0++;
+        replay0(punktestand0, punktestandX);
     }
 
     // Check if it's a tie
@@ -73,29 +92,27 @@ function userSelect() {
     }
 }
 
-function replay0() {
+function replay0(punktestand0, punktestandX) {
     if (confirm('Player 0 won! Play again?')) {
         // Play again
-        console.log('Thing was saved to the database.');
-        restart();
+        reset(punktestand0, punktestandX);
     } else {
         // Not again
-        reset();
+        restart();
     }
 }
 
-function replayX() {
+function replayX(punktestand0, punktestandX) {
     if (confirm('Player X won! Play again?')) {
         // Play again
-        console.log('Thing was saved to the database.');
-        restart();
+        reset(punktestand0, punktestandX);
     } else {
         // Not again
-        reset();
+        restart();
     }
 }
 
-function reset() {
+function reset(punktestand0, punktestandX) {
     document.getElementById('box1').innerHTML = "";
     document.getElementById("box2").innerHTML = "";
     document.getElementById("box3").innerHTML = "";
@@ -105,8 +122,19 @@ function reset() {
     document.getElementById("box7").innerHTML = "";
     document.getElementById("box8").innerHTML = "";
     document.getElementById("box9").innerHTML = "";
+    document.getElementById("punktestand-title").style.display = "block";
+    document.getElementById("punktestand-text").style.display = "block";
+    document.getElementById("punktestand-text").innerText = punktestandX + "  :  " + punktestand0;
 }
 
 function restart() {
     location.reload();
+}
+
+function start() {
+    document.getElementById("start").style.display = "none";
+    document.getElementById("player_turn").style.display = "block";
+    document.getElementById("reset").style.display = "inline-block";
+    document.getElementById("restart").style.display = "inline-block";
+    document.getElementById("container").style.display = "grid";
 }
