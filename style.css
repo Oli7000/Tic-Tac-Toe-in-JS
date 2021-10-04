@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #12181b;
+    font-family: "Itim", cursive;
 }
 
 .title {
@@ -55,7 +56,7 @@ body {
 
 #restart {
     margin-top: 2em;
-    margin-left: 53.1em;
+    margin-left: 55em;
     background-color: royalblue;
     border: 1px solid royalblue;
     color: white;
