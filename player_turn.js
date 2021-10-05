@@ -23,7 +23,7 @@ function function1() {
     } else if (turn == 2) {
         if (box1.innerHTML == "") {
             box1.innerText = 'O';
-            player_turn.innerHTML = "Player O's turn";
+            player_turn.innerHTML = "Player X's turn";
             turn--;
         } else {
             alert("Field is already marked.");

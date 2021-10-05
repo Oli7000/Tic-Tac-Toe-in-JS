@@ -1,5 +1,5 @@
 var punktestandX = 0;
-var punktestand0 = 0;
+var punktestandO = 0;
 
 var box1 = document.getElementById("box1");
 var box2 = document.getElementById("box2");
@@ -23,27 +23,27 @@ function userSelect() {
         ((box2.innerText == 'X') && (box5.innerText == 'X') && (box8.innerText == 'X')) ||
         ((box4.innerText == 'X') && (box5.innerText == 'X') && (box6.innerText == 'X'))) {
         punktestandX++;
-        replayX(punktestand0, punktestandX);
+        replayX(punktestandO, punktestandX);
     }
 
-    // Checking if Player 0 won
-    // For that it will check, if on the squares are 0 on the right possition
+    // Checking if Player O won
+    // For that it will check, if on the squares are O on the right possition
     else if (((box1.innerText == 'O') && (box2.innerText == 'O') && (box3.innerText == 'O')) ||
         ((box1.innerText == 'O') && (box4.innerText == 'O') && (box7.innerText == 'O')) ||
         ((box7.innerText == 'O') && (box8.innerText == 'O') && (box9.innerText == 'O')) ||
         ((box3.innerText == 'O') && (box6.innerText == 'O') && (box9.innerText == 'O')) ||
         ((box1.innerText == 'O') && (box5.innerText == 'O') && (box9.innerText == 'O')) ||
-        ((box3.innerTex == 'O') && (box5.innerText == 'O') && (box7.innerText == 'O')) ||
+        ((box3.innerText == 'O') && (box5.innerText == 'O') && (box7.innerText == 'O')) ||
         ((box2.innerText == 'O') && (box5.innerText == 'O') && (box8.innerText == 'O')) ||
         ((box4.innerText == 'O') && (box5.innerText == 'O') && (box6.innerText == 'O'))) {
-        punktestand0++;
-        replay0(punktestand0, punktestandX);
+        punktestandO++;
+        replayO(punktestandO, punktestandX);
     }
 
     // Check if it's a tie
     else if ((box1.innerText == 'X' || box1.innerText == 'O') && (box2.innerText == 'X' ||
-        box2.innerText == 'O') && (box3.innerTex == 'X' || box3.innerTex == 'O') &&
-        (box4.innerText == 'X' || box4.innerText == '0') && (box5.innerText == 'X' ||
+        box2.innerText == 'O') && (box3.innerText == 'X' || box3.innerText == 'O') &&
+        (box4.innerText == 'X' || box4.innerText == 'O') && (box5.innerText == 'X' ||
             box5.innerText == 'O') && (box6.innerText == 'X' || box6.innerText == 'O') &&
         (box7.innerText == 'X' || box7.innerText == 'O') && (box8.innerText == 'X' ||
             box8.innerText == 'O') && (box9.innerText == 'X' || box9.innerText == 'O')) {
@@ -52,27 +52,27 @@ function userSelect() {
     }
 }
 
-function replay0(punktestand0, punktestandX) {
-    if (confirm('Player 0 won! Play again?')) {
+function replayO(punktestandO, punktestandX) {
+    if (confirm('Player O won! Play again?')) {
         // Play again
-        reset(punktestand0, punktestandX);
+        reset(punktestandO, punktestandX);
     } else {
         // Not again
         restart();
     }
 }
 
-function replayX(punktestand0, punktestandX) {
+function replayX(punktestandO, punktestandX) {
     if (confirm('Player X won! Play again?')) {
         // Play again
-        reset(punktestand0, punktestandX);
+        reset(punktestandO, punktestandX);
     } else {
         // Not again
         restart();
     }
 }
 
-function reset(punktestand0, punktestandX) {
+function reset(punktestandO, punktestandX) {
     document.getElementById('box1').innerHTML = "";
     document.getElementById("box2").innerHTML = "";
     document.getElementById("box3").innerHTML = "";
@@ -84,7 +84,7 @@ function reset(punktestand0, punktestandX) {
     document.getElementById("box9").innerHTML = "";
     document.getElementById("punktestand-title").style.display = "block";
     document.getElementById("punktestand-text").style.display = "block";
-    document.getElementById("punktestand-text").innerText = punktestandX + "  :  " + punktestand0;
+    document.getElementById("punktestand-text").innerText = punktestandX + "  :  " + punktestandO;
 }
 
 function tie() {
