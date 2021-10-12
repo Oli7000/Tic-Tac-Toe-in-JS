@@ -1,6 +1,7 @@
-var turn = 1;
-var player_turn = document.getElementById("player_turn");
+var turn = 1; // Sets that player "X" starts
+var player_turn = document.getElementById("player_turn"); // Get element of id "player_turn" for changing the text
 
+// Get every box from the container via id
 var box1 = document.getElementById('box1');
 var box2 = document.getElementById("box2");
 var box3 = document.getElementById("box3");
@@ -11,6 +12,7 @@ var box7 = document.getElementById("box7");
 var box8 = document.getElementById("box8");
 var box9 = document.getElementById("box9");
 
+// If first box has been clicked
 function function1() {
     if (turn == 1) {
         if (box1.innerHTML == "") {
@@ -30,6 +32,7 @@ function function1() {
         }
     }
 }
+// If second box has been clicked
 function function2() {
     if (turn == 1) {
         if (box2.innerHTML == "") {
@@ -49,6 +52,7 @@ function function2() {
         }
     }
 }
+// If third box has been clicked
 function function3() {
     if (turn == 1) {
         if (box3.innerHTML == "") {
@@ -68,6 +72,7 @@ function function3() {
         }
     }
 }
+// If forth box has been clicked
 function function4() {
     if (turn == 1) {
         if (box4.innerHTML == "") {
@@ -87,6 +92,7 @@ function function4() {
         }
     }
 }
+// If fifth box has been clicked
 function function5() {
     if (turn == 1) {
         if (box5.innerHTML == "") {
@@ -106,6 +112,7 @@ function function5() {
         }
     }
 }
+// If sixth box has been clicked
 function function6() {
     if (turn == 1) {
         if (box6.innerHTML == "") {
@@ -125,6 +132,7 @@ function function6() {
         }
     }
 }
+// If seventh box has been clicked
 function function7() {
     if (turn == 1) {
         if (box7.innerHTML == "") {
@@ -144,6 +152,7 @@ function function7() {
         }
     }
 }
+// If eighth box has been clicked
 function function8() {
     if (turn == 1) {
         if (box8.innerHTML == "") {
@@ -163,6 +172,7 @@ function function8() {
         }
     }
 }
+// If ninth box has been clicked
 function function9() {
     if (turn == 1) {
         if (box9.innerHTML == "") {

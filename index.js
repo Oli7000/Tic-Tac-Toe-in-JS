@@ -1,6 +1,7 @@
-var punktestandX = 0;
-var punktestandO = 0;
+var punktestandX = 0; // Score of "X"
+var punktestandO = 0; // Score of "0"
 
+// Get every box from the container via id
 var box1 = document.getElementById("box1");
 var box2 = document.getElementById("box2");
 var box3 = document.getElementById("box3");
@@ -52,6 +53,7 @@ function userSelect() {
     }
 }
 
+// Check if player wants to play again after "0" won
 function replayO(punktestandO, punktestandX) {
     if (confirm('Player O won! Play again?')) {
         // Play again
@@ -62,6 +64,7 @@ function replayO(punktestandO, punktestandX) {
     }
 }
 
+// Check if player wants to play again after "X" won
 function replayX(punktestandO, punktestandX) {
     if (confirm('Player X won! Play again?')) {
         // Play again
@@ -72,6 +75,7 @@ function replayX(punktestandO, punktestandX) {
     }
 }
 
+// When the player says after "0" won or "Y" won cancel
 function reset(punktestandO, punktestandX) {
     document.getElementById('box1').innerHTML = "";
     document.getElementById("box2").innerHTML = "";
@@ -87,6 +91,7 @@ function reset(punktestandO, punktestandX) {
     document.getElementById("punktestand-text").innerText = punktestandX + "  :  " + punktestandO;
 }
 
+// When every field is occupied and no winner
 function tie() {
     document.getElementById('box1').innerHTML = "";
     document.getElementById("box2").innerHTML = "";
@@ -99,10 +104,12 @@ function tie() {
     document.getElementById("box9").innerHTML = "";
 }
 
+// When the restart button is clicked
 function restart() {
     location.reload();
 }
 
+// When the start button is clicked
 function start() {
     document.getElementById("start").style.display = "none";
     document.getElementById("player_turn").style.display = "block";
